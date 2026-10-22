@@ -1,0 +1,186 @@
+/* ===== Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primario: #2563eb;
+  --color-primario-oscuro: #1e40af;
+  --color-texto: #1f2937;
+  --color-texto-suave: #6b7280;
+  --color-fondo: #f9fafb;
+  --color-blanco: #ffffff;
+  --radio: 12px;
+  --sombra: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+.contenedor {
+  width: min(1100px, 90%);
+  margin-inline: auto;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header ===== */
+.header {
+  background: var(--color-blanco);
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: var(--color-texto-suave);
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding-block: 6rem;
+  text-align: center;
+  background: linear-gradient(135deg, #eff6ff, #e0e7ff);
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  color: var(--color-texto-suave);
+  font-size: 1.1rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--color-primario);
+  color: var(--color-blanco);
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+  background: var(--color-primario-oscuro);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* ===== Servicios ===== */
+.servicios {
+  padding-block: 4rem;
+}
+
+.servicios h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta {
+  background: var(--color-blanco);
+  padding: 1.75rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+}
+
+.tarjeta h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-primario);
+}
+
+.tarjeta p {
+  color: var(--color-texto-suave);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #111827;
+  color: #d1d5db;
+  padding-block: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #93c5fd;
+}
+
+.footer p + p {
+  margin-top: 0.4rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .header .contenedor {
+    flex-direction: column;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
+  .hero {
+    padding-block: 4rem;
+  }
+}
