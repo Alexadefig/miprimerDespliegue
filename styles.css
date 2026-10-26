@@ -184,3 +184,26 @@ a:hover {
     padding-block: 4rem;
   }
 }
+
+/* ===== Tarjeta de Alexandra Andrade ===== */
+.tarjeta-alexandra {
+  background-color: #ffe6f0;
+  border: 1px solid #ffb6c1;
+  border-radius: var(--radio, 12px);
+  padding: 12px 16px;
+  text-align: center;
+  max-width: auto;
+  margin: 1.5rem auto;
+}
+
+.alumno-alexandra {
+  color: #d81b60;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.alumno-FS {
+  color: #880e4f;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
